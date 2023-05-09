@@ -20,3 +20,23 @@ spring:
   sql:
     init:
       mode: never
+
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 3000
+        read-timeout: 3000
+        logger-level: basic
+
+logging:
+  level:
+    com:
+      spring:
+        infrastructure:
+          finance:
+            feign: DEBUG
+
+external-api:
+  stock:
+    yahoo: https://query1.finance.yahoo.com/

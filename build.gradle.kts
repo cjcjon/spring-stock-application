@@ -23,6 +23,7 @@ object Versions {
   const val KOTEST_SPRING = "1.1.2"
   const val MOCKK = "1.13.4"
   const val SPRING_MOCKK = "4.0.2"
+  const val SPRING_CLOUD = "2021.0.7"
 }
 
 dependencies {
@@ -31,6 +32,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-data-jpa")
   implementation("org.springframework.boot:spring-boot-starter-validation")
   implementation("org.springframework.boot:spring-boot-starter-web")
+  implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("com.h2database:h2")
 
@@ -61,6 +63,12 @@ dependencies {
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
   testImplementation("io.mockk:mockk:${Versions.MOCKK}")
   testImplementation("com.ninja-squad:springmockk:${Versions.SPRING_MOCKK}")
+}
+
+dependencyManagement {
+  imports {
+    mavenBom("org.springframework.cloud:spring-cloud-dependencies:${Versions.SPRING_CLOUD}")
+  }
 }
 
 tasks.withType<KotlinCompile> {
