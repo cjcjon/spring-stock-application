@@ -1,0 +1,19 @@
+# h2 database web으로 확인
+spring:
+  h2:
+    console:
+      enabled: false
+
+  # JPA Entity 기준으로 DB 테이블 생성
+  jpa:
+    database: h2
+    show-sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;MODE=MySQL;   # InMemory 형태로 종료되면 사라짐
+    username: sa
+    password: sa

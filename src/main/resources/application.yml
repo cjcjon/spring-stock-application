@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: local
+
+  # 404 에러일경우 throw 처리
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+  web:
+    resources:
+      add-mappings: false
+
+  # JPA 기준으로 테이블 만들지 않음
+  jpa:
+    generate-ddl: false
+    show-sql: false
+    open-in-view: false
+
+  # DDL 스크립트 사용하지 않음
+  sql:
+    init:
+      mode: never
