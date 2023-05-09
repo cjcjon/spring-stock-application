@@ -1,4 +1,4 @@
-package com.spring.test
+package com.stockapplication.test
 
 import io.kotest.core.spec.style.FeatureSpec
 import io.kotest.extensions.spring.SpringExtension

@@ -32,7 +32,7 @@ feign:
 logging:
   level:
     com:
-      spring:
+      stockapplication:
         infrastructure:
           finance:
             feign: DEBUG

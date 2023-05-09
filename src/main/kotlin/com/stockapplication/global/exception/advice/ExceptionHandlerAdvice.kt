@@ -1,8 +1,8 @@
-package com.spring.global.exception.advice
+package com.stockapplication.global.exception.advice
 
-import com.spring.global.exception.ApiException
-import com.spring.global.exception.ErrorCode
-import com.spring.global.exception.ErrorResponse
+import com.stockapplication.global.exception.ApiException
+import com.stockapplication.global.exception.ErrorCode
+import com.stockapplication.global.exception.ErrorResponse
 import feign.FeignException
 import mu.KotlinLogging
 import org.springframework.http.HttpStatus

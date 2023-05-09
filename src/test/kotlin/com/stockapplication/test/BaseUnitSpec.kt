@@ -1,4 +1,4 @@
-package com.spring.test
+package com.stockapplication.test
 
 import io.kotest.core.spec.style.FunSpec
 import org.springframework.test.context.ActiveProfiles

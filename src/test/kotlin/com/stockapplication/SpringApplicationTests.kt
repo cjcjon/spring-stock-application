@@ -1,6 +1,6 @@
-package com.spring
+package com.stockapplication
 
-import com.spring.test.SpringIntegrationBDDSpec
+import com.stockapplication.test.SpringIntegrationBDDSpec
 import io.kotest.matchers.shouldBe
 
 class SpringApplicationTests : SpringIntegrationBDDSpec({

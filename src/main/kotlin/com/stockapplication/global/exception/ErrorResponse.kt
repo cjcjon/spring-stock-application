@@ -1,4 +1,4 @@
-package com.spring.global.exception
+package com.stockapplication.global.exception
 
 data class ErrorResponse(val code: ErrorCode, val message: String)
 

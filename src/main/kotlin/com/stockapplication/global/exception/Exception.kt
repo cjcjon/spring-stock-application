@@ -1,7 +1,6 @@
-package com.spring.global.exception
+package com.stockapplication.global.exception
 
 import org.springframework.http.HttpStatus
-import java.lang.RuntimeException
 
 sealed class ApiException(
   val status: HttpStatus,
