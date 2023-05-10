@@ -15,3 +15,6 @@ POST http://localhost:8080/api/v1/stocks/samsung
 H2 Console로 조회 가능<br />
 http://localhost:8080/h2-console <br />
 url, id, password는 application-local 확인 <br />
+
+### API Doc 조회
+http://localhost:8080/swagger-ui/index.html
