@@ -1,0 +1,4 @@
+## 삼성 최근 5일 주식 정보 저장
+POST http://localhost:8080/api/v1/stocks/samsung
+Content-Type: application/json
+
