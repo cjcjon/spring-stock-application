@@ -46,6 +46,9 @@ dependencies {
   // logging
   implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
 
+  // swagger
+  implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
+
   // test: spring
   testImplementation("org.springframework.boot:spring-boot-starter-test") {
     exclude(module = "mockito-core")
