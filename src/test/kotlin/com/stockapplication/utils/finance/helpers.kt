@@ -1,7 +1,9 @@
 package com.stockapplication.utils.finance
 
+import com.stockapplication.domain.stock.application.model.StockResult
 import com.stockapplication.infrastructure.finance.feign.model.YahooFinanceChartResponse
 import java.time.Instant
+import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 
 fun createYahooChartResponse(
@@ -38,4 +40,20 @@ fun createYahooChartResponse(
   ),
 )
 
-fun Instant.minusDays(n: Long) = this.minus(n, ChronoUnit.DAYS)
+fun Instant.minusDays(n: Long): Instant = this.minus(n, ChronoUnit.DAYS)
+
+fun createStockResult(
+  high: Double,
+  low: Double,
+  volume: Long,
+  open: Double,
+  close: Double,
+  date: LocalDate,
+): StockResult = StockResult(
+  high = high,
+  low = low,
+  volume = volume,
+  open = open,
+  close = close,
+  date = date,
+)

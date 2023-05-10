@@ -1,6 +1,5 @@
 package com.stockapplication.domain.stock.application
 
-import com.stockapplication.domain.stock.application.model.StockResult
 import com.stockapplication.domain.stock.domain.Stock
 import com.stockapplication.domain.stock.infrastructure.StockRepository
 import com.stockapplication.global.exception.InvalidRequestException
@@ -8,6 +7,7 @@ import com.stockapplication.global.extension.toLocalDate
 import com.stockapplication.infrastructure.finance.YahooFinanceAdaptor
 import com.stockapplication.infrastructure.finance.feign.YahooFinanceClient
 import com.stockapplication.test.SpringBDDSpec
+import com.stockapplication.utils.finance.createStockResult
 import com.stockapplication.utils.finance.createYahooChartResponse
 import com.stockapplication.utils.finance.minusDays
 import feign.codec.EncodeException
@@ -194,22 +194,6 @@ class StockSaveServiceSpec(stockRepository: StockRepository) : SpringBDDSpec(
   companion object {
     private const val CODE = "005930.KS"
     private const val TIME_ZONE_NAME = "Asia/Seoul"
-
-    private fun createStockResult(
-      high: Double,
-      low: Double,
-      volume: Long,
-      open: Double,
-      close: Double,
-      date: LocalDate,
-    ): StockResult = StockResult(
-      high = high,
-      low = low,
-      volume = volume,
-      open = open,
-      close = close,
-      date = date,
-    )
 
     private fun createStock(
       high: Double,
